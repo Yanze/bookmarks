@@ -4,23 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %} {% endblock %}</title>
-
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 
 <body>
     <div id="header" class="nav navbar-default">
         <div class="container">
-          <ul>
           <span class="logo">Bookmarks</span> {% if request.user.is_authenticated %}
-          <li {% if section == "dashboard" %}class="selected"{% endif %} style="display: inline-block; padding-right: 30px;">
+          <ul>
+          <li {% if section == "dashboard" %}class="selected"{% endif %} style="display: inline; padding-right: 30px;">
             <a href="{% url "dashboard" %}">My dashboard</a>
           </li>
-          <li {% if section == "images" %}class="selected"{% endif %} style="display: inline-block; padding-right: 30px;">
+          <li {% if section == "images" %}class="selected"{% endif %} style="display: inline; padding-right: 30px;">
             <a href="#">Images</a>
           </li>
-          <li {% if section == "people" %}class="selected"{% endif %} style="display: inline-block; padding-right: 30px;">
+          <li {% if section == "people" %}class="selected"{% endif %} style="display: inline; padding-right: 30px;">
             <a href="#">People</a>
           </li>
 
@@ -32,7 +31,7 @@
           <h4>Hello {{ request.user.first_name }},</h4>
             <a href="{% url 'logout' %}" style="display: inline;float:right;">Logout</a>
           {% else %}
-            <a href="{% url 'login' %}" style="display: inline;float:right;">Log-in</a>
+            <a href="{% url 'login' %}" style="display: inline;">Log-in</a>
           {% endif %}
           </span>
         </div>
