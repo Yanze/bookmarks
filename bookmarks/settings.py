@@ -110,3 +110,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+# media url is the base url to server the meida files upload by users
+MEDIA_URL = '/media/'
+# media root is the local path where media file reside.
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
