@@ -4,6 +4,7 @@ from django.conf import settings
 
 # extend User model
 class Profile(models.Model):
+    # one-to-one field allows us to associate profiles with users.
     user = models.OneToOneField(settings.AUTH_USER_MODEL)
     date_of_birth = models.DateField(blank=True, null=True)
     photo = models.ImageField(upload_to='users/%Y/%m/%d', blank=True)
