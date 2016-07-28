@@ -1,5 +1,6 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
+media/
 .DS_Store
 .bash_env
 *.py[cod]
