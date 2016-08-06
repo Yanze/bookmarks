@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Bookmark an image {% endblock %}</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <script src="bookmarklet_launcher.js"></script>
+</head>
+
+<body>
+    <div id="content" class="container">
+      <h1>Bookmark an image</h1>
+        {% block content %} {% endblock %}
+    </div>
+</body>
+
+</html>
